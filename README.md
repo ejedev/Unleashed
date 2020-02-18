@@ -4,13 +4,17 @@ A Python library to interact with the Unleashed API. This is based off of Jonath
 # Documentation
 As it stands, the module is currently quite basic. It currently only allows you to pull data from an endpoint (but allows for specifications.)
 
+**Install the module**
+
+`pip install Unleashed`
+
 **Import the module**
 
 `from Unleashed import Unleashed`
 
 **Set up a client**
 
-`Client = Unleashed.UnleashedClient(api_key, api_id)`
+`Client = Unleashed.Client(api_key, api_id)`
 
 **Request data**
 
