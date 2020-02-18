@@ -18,7 +18,7 @@ As it stands, the module is currently quite basic. It currently only allows you 
 
 **Request data**
 
-This will return JSON data. it can be iterated through like a Python dictionary.
+This will return JSON data. It can be iterated through like a Python dictionary.
 
 `data = Client.request_endpoint("SalesOrders")`
 
