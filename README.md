@@ -1,4 +1,4 @@
-# Unleashed
+# Unleashed [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Canadian Mental Health Association](https://i.imgur.com/GvXBeY4.png)](https://cmha.ca/donate)
 A Python library to interact with the Unleashed API. This is based off of Jonathan Sokolowski's original module but intended to be maintained and updated for future versions of Python.
 
 # Documentation
