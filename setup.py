@@ -1,3 +1,4 @@
+import setuptools
 from distutils.core import setup
 setup(
   name = 'Unleashed',
@@ -11,6 +12,7 @@ setup(
   download_url = 'https://github.com/ejedev/Unleashed/archive/v0.1.tar.gz',
   keywords = ['Unleashed', 'API'],
   install_requires=[
+    'wheel',
           ],
   classifiers=[
     'Development Status :: 3 - Alpha',
