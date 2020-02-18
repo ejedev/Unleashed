@@ -1,5 +1,5 @@
 # Unleashed
-A Python library to interact with the Unleashed API. This is based off of Jonathan Sokolowski's original module but intended to be maintained and updated for future versions of Python.
+A Python library to interact with the Unleashed API. This is based off of Jonathan Sokolowski's original module but intended to be maintained and updated for future versions of Python. This module is currently broken.
 
 # Documentation
 As it stands, the module is currently quite basic. It currently only allows you to pull data from an endpoint (but allows for specifications.)
