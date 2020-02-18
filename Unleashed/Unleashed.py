@@ -41,7 +41,7 @@ class UnleashedClient(requests.auth.AuthBase):
 
     def request_endpoint(self, endpoint, options=None):
         if options is not None:
-            resp = self._get_request(endpoint + options)
+            resp = self._get_request(endpoint + "?" + options)
         else:
             resp = self._get_request(endpoint)
         json_parsed = resp.json()
