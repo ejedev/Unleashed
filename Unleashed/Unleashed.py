@@ -3,7 +3,7 @@ import binascii
 import hashlib
 import hmac
 
-class UnleashedClient(requests.auth.AuthBase):
+class Client(requests.auth.AuthBase):
     def __init__(self, api_key, api_id):
         self.api_key = api_key.encode('utf-8')
         self.api_id = api_id
