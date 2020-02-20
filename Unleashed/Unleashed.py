@@ -46,3 +46,9 @@ class Client(requests.auth.AuthBase):
             resp = self._get_request(endpoint)
         json_parsed = resp.json()
         return json_parsed
+
+    def return_items(self, endpoint ,options=None):
+        return self.request_endpoint(endpoint,options)['Items']
+
+    def return_pagination(self, endpoint ,options=None):
+        return self.request_endpoint(endpoint,options)['Pagination']
