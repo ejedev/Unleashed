@@ -41,18 +41,18 @@ class Client(requests.auth.AuthBase):
 
     def request_endpoint(self, endpoint, options=None, page=None):
         if options is not None and page is not None:
-            resp = self._get_request(endpoint + "/" + page + "/" + "?" + options)
+            resp = self._get_request(endpoint + "/" + str(page) + "/" + "?" + options)
         elif options is not None and page is None:
             resp = self._get_request(endpoint + "?" + options)
         elif options is None and page is not None:
-            resp = self._get_request(endpoint + "/" + page + "/")
+            resp = self._get_request(endpoint + "/" + str(page) + "/")
         else:
             resp = self._get_request(endpoint)
         json_parsed = resp.json()
         return json_parsed
 
-    def return_items(self, endpoint ,options=None):
-        return self.request_endpoint(endpoint,options)['Items']
+    def return_items(self, endpoint ,options=None, page=None):
+        return self.request_endpoint(endpoint,options,page)['Items']
 
-    def return_pagination(self, endpoint ,options=None):
-        return self.request_endpoint(endpoint,options)['Pagination']
+    def return_pagination(self, endpoint ,options=None,page=None):
+        return self.request_endpoint(endpoint,options,page)['Pagination']
