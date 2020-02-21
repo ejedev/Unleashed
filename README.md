@@ -34,5 +34,9 @@ This will return JSON data from a specified endpoint. It can be iterated through
 
 `data = Client.return_pagination("SalesOrders", "pageSize=50&startDate=2019-11-20")`
 
+**Request data and specify a page**
+
+`data = Client.request_endpoint("SalesOrders", "pageSize=50&startDate=2019-11-20", 2)`
+
 # Acknowledgements
 [Jonathan Sokolowski](https://github.com/jsok/) for the original Unleashed module. You can view it [here.](https://github.com/jsok/unleashed)
