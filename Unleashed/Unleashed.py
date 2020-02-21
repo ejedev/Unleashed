@@ -39,9 +39,13 @@ class Client(requests.auth.AuthBase):
         )
         return resp
 
-    def request_endpoint(self, endpoint, options=None):
-        if options is not None:
+    def request_endpoint(self, endpoint, options=None, page=None):
+        if options is not None and page is not None:
+            resp = self._get_request(endpoint + "/" + page + "/" + "?" + options)
+        elif options is not None and page is None:
             resp = self._get_request(endpoint + "?" + options)
+        elif options is None and page is not None:
+            resp = self._get_request(endpoint + "/" + page + "/")
         else:
             resp = self._get_request(endpoint)
         json_parsed = resp.json()
